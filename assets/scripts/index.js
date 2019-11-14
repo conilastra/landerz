@@ -109,11 +109,10 @@ setFeatures();
 // Navbar
 toggleMenu = () => {
 	let menu = document.getElementById('menu');
-	console.log('test');
 
-	if (menu.style.display === 'none') {
-		menu.style.display = 'block';
-	} else {
-		menu.style.display = 'none';
-	}
+	if (menu.className === 'nav') {
+		menu.className += ' show';
+	} else menu.className = 'nav';
 };
+
+document.getElementById('menuToggle').addEventListener('click', toggleMenu);

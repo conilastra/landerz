@@ -18,7 +18,7 @@
     <title>Landerz</title>
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#navbar, #menu">
 
     <!-- Header -->
 
@@ -29,42 +29,30 @@
                 <h1 class="logo" id="logo"><a href="#">Landerz<span class="turquoise-text">.</span></a></h1>
             </div>
             <nav>
-                <div id="menuToggle" onclick="toggleMenu()">
+                <div id="menuToggle">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
 
-                <ul id="menu">
-                    <a href="#">
-                        <li>Home</li>
-                    </a>
-                    <a href="#features">
-                        <li>Features</li>
-                    </a>
-                    <a href="#about-us">
-                        <li>About Us</li>
-                    </a>
-                    <a href="#testimonials">
-                        <li>Testimonials</li>
-                    </a>
-                    <a href="#">
-                        <li>Blog</li>
-                    </a>
-                    <a href="#contact">
-                        <li>Contact</li>
-                    </a>
+                <ul id="menu" class="nav">
+                  <li class="nav-item active"><a href="#" class="nav-link active">Home <span class="sr-only">(current)</span></a></li>
+                  <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#about-us">About Us</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                  <li class="nav-item"><a class="nav-link" href="">Blog</a></li>
+                  <li class="nav-item"><a class="nav-link" class="contact" href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Tablet +  -->
-    <nav class="sticky col col-md-12 navbar navbar-expand-md navbar-light bg-white d-none d-md-flex justify-content-end">
-        <div class="collapse navbar-collapse justify-content-md-center" id="navbarSupportedContent">
+    <nav class="sticky col col-md-12 navbar navbar-expand-md navbar-light bg-white d-none d-md-flex justify-content-end" id="navbar">
+        <div class="collapse navbar-collapse justify-content-md-center">
             <ul class="navbar-nav float-right">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#features">Features</a>
@@ -89,6 +77,9 @@
         <h1 class="col col-md-12 logo order-md-2 py-3 d-none d-md-flex justify-content-center" id="logo">Landerz<span class="turquoise-text">.</span></h1>
     </header>
 
+
+    <!-- Main -->
+    <main>
     <!-- Hero Section -->
     <section id="hero" class="pb-4">
         <div class="container-fluid">
@@ -207,6 +198,7 @@
             </div>
         </div>
     </section>
+</main>
 
     <footer class="text-center">
         <p>Copyright ©2019 All rights reserved </p>
