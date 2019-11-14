@@ -58,7 +58,7 @@ setFeatures = () => {
 
 	const title = document.createElement('h3');
 	title.textContent = 'Features';
-	title.setAttribute('class', 'text-center py-4 font-weight-bold');
+	title.setAttribute('class', 'title text-center py-4 font-weight-bold');
 
 	const featureList = [
 		{ title: 'Business Consulting', icon: 'icon-autorenew' },

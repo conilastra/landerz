@@ -1,8 +1,16 @@
 /* GENERAL STYLES */
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: 'Montserrat', sans-serif;
 	max-width: 100vw;
 	box-sizing: border-box;
+}
+
+section {
+	padding: 1rem 0;
 }
 
 /* Text */
@@ -33,13 +41,16 @@ p {
 	color: #6c757d;
 }
 
-.logo {
+#logo {
 	font-weight: 500;
 	font-size: 2em;
+	display: flex;
+	justify-content: center;
 }
 
 .title {
-	font-size: 2rem;
+	font-size: 200%;
+	padding: 50px 0;
 }
 
 .turquoise-text {
@@ -57,8 +68,8 @@ button {
 }
 
 .dark-hover:hover {
-	background: #008c6f;
-	padding: 1rem 2.2rem;
+	background: rgb(0, 210, 181);
+	background: linear-gradient(90deg, rgba(0, 210, 181, 1) 0%, rgba(0, 164, 145, 1) 27%, rgba(20, 98, 103, 1) 100%);
 }
 
 .nav-button {
@@ -69,9 +80,9 @@ button {
 /* SECTIONS */
 /* Navbar */
 .sticky {
-	position: fixed;
+	position: sticky;
 	top: 0;
-	width: 100%;
+	z-index: 1020;
 }
 
 /* Hero */
@@ -81,7 +92,6 @@ button {
 	}
 }
 
-/* Hero */
 #hero {
 	padding-top: 60px;
 }
@@ -95,11 +105,11 @@ button {
 	padding: 2rem;
 	margin: 1rem;
 	border: none;
-	transition: border .5s ease-out;
+	transition: border .5s ease-in-out;
 }
 
 .feature-card:hover {
-	border: 2px solid #00d2b5;
+	border: 1px solid #00d2b6;
 }
 
 .icon-container {
@@ -112,6 +122,15 @@ button {
 	align-items: center;
 	justify-content: center;
 	color: white;
+}
+
+.icon {
+	border-radius: 50%;
+	transition: transform .8s ease-in-out;
+}
+
+.icon:hover {
+	transform: rotate(360deg);
 }
 
 /* Testimonials */

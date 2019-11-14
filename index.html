@@ -18,12 +18,17 @@
 
     <title>Landerz</title>
 </head>
+
+
 <body>
+
     <!-- Header -->
-    <header class="container-fluid sticky-top" id="header">
+    <header class="sticky" id="header">
+      <div class="container-fluid">
         <div class="row bg-white">
-          <h1 class="col col-md-12 logo order-md-2 d-flex justify-content-center py-3">Landerz<span class="turquoise-text">.</span></h1>
-        
+
+          <h1 class="col col-md-12 logo order-md-2 py-3" id="logo">Landerz<span class="turquoise-text">.</span></h1>
+  
           <nav class="col col-md-12 navbar navbar-expand-md navbar-light bg-white d-flex justify-content-end">
       
               <button class="navbar-toggler nav-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,13 +41,13 @@
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link" href="#features">Features</a>
                   </li>
                   <li class="nav-item">
                       <a class="nav-link" href="#">About Us</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="#">Testimonials</a>
+                      <a class="nav-link" href="#testimonials">Testimonials</a>
                   </li>
                   <li class="nav-item">
                       <a class="nav-link" href="#">Blog</a>
@@ -53,8 +58,9 @@
                 </ul>
               </div>
             </nav>
-        </div>
-    </header>
+          </div>
+        </div> 
+      </header>
 
       
     
@@ -78,7 +84,7 @@
     </section>
 
     <!-- Features -->    
-    <section class="mt-4 py-4 wow fadeIn" data-wow-offset="10" id="features"></section>
+    <section class="mt-4 wow fadeIn" data-wow-offset="10" id="features"></section>
 
     <!-- Testimonials -->
     <section id="testimonials" class="carousel slide wow fadeIn" data-wow-offset="10" data-ride="carousel">
