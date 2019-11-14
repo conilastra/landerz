@@ -1,5 +1,6 @@
 /* GENERAL STYLES */
 * {
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -14,7 +15,7 @@ body {
 }
 
 section {
-	padding: 3rem 0;
+	padding: 5rem 0;
 }
 
 @media (min-width: 768px) {
@@ -39,6 +40,7 @@ a {
 a:hover {
 	color: #008c6f;
 	text-decoration: none;
+	-webkit-box-shadow: none;
 	box-shadow: none;
 }
 
@@ -64,8 +66,14 @@ li {
 #logo {
 	font-weight: 500;
 	font-size: 2em;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
+	padding: .5rem;
+}
+
+#logo a {
+	color: black;
 }
 
 .title {
@@ -91,11 +99,22 @@ button {
 	border: none;
 	border-radius: 30px;
 	padding: .8rem 2rem;
+	-webkit-transition: background-color .5s, padding .5s ease-out;
+	-o-transition: background-color .5s, padding .5s ease-out;
 	transition: background-color .5s, padding .5s ease-out;
 }
 
 .button-hover:hover {
 	background: rgb(0, 210, 181);
+	background: -webkit-gradient(
+		linear,
+		left top,
+		right top,
+		from(rgba(0, 210, 181, 1)),
+		color-stop(27%, rgba(0, 164, 145, 1)),
+		to(rgba(20, 98, 103, 1))
+	);
+	background: -o-linear-gradient(left, rgba(0, 210, 181, 1) 0%, rgba(0, 164, 145, 1) 27%, rgba(20, 98, 103, 1) 100%);
 	background: linear-gradient(90deg, rgba(0, 210, 181, 1) 0%, rgba(0, 164, 145, 1) 27%, rgba(20, 98, 103, 1) 100%);
 }
 
@@ -106,7 +125,12 @@ button {
 
 /* SECTIONS */
 /* Navbar */
+.header {
+	padding: .5rem 1rem;
+}
+
 .sticky {
+	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
 	z-index: 1020;
@@ -114,14 +138,69 @@ button {
 
 @media (min-width: 768px) {
 	.navbar {
+		-webkit-box-shadow: 0px -11px 20px 10px #8888883b;
 		box-shadow: 0px -11px 20px 10px #8888883b;
 	}
 }
 
+.navbar-light .navbar-nav .contact > .nav-link {
+	color: #00d2b5;
+}
+
+/* Navbar */
+#menuToggle {
+	display: block;
+	position: relative;
+	right: 10px;
+	z-index: 1;
+
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+#menuToggle span {
+	display: block;
+	width: 33px;
+	height: 4px;
+	margin-bottom: 5px;
+	position: relative;
+
+	background: #000000;
+	border-radius: 3px;
+
+	z-index: 1;
+}
+
+#menu {
+	display: none;
+	position: absolute;
+	width: 10rem;
+	padding: 28px;
+	right: -10rem;
+
+	background: #fffffff5;
+	list-style-type: none;
+	-webkit-font-smoothing: antialiased;
+
+	transform-origin: 0% 0%;
+	transform: translate(-100%, 0);
+
+	transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+	padding: 10px 0;
+}
+
 /* Hero */
 #hero {
-	height: 100vh;
+	min-height: 80vh;
 	padding: 0;
+}
+#hero .row {
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
 }
 
 .hero-img {
@@ -132,6 +211,12 @@ button {
 }
 
 @media (min-width: 768px) {
+	.hero-img {
+		height: 55vh;
+	}
+}
+
+@media (min-width: 992px) {
 	.hero-img {
 		height: 100vh;
 	}
@@ -155,6 +240,8 @@ button {
 	padding: 2rem;
 	margin: 1rem;
 	border: none;
+	-webkit-transition: border .5s ease-in-out;
+	-o-transition: border .5s ease-in-out;
 	transition: border .5s ease-in-out;
 }
 
@@ -168,18 +255,30 @@ button {
 	width: 50px;
 	border-radius: 100%;
 	margin-bottom: 1rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 	color: white;
 }
 
 .icon {
 	border-radius: 50%;
+	-webkit-transition: -webkit-transform .8s ease-in-out;
+	transition: -webkit-transform .8s ease-in-out;
+	-o-transition: transform .8s ease-in-out;
 	transition: transform .8s ease-in-out;
+	transition: transform .8s ease-in-out, -webkit-transform .8s ease-in-out;
 }
 
 .icon:hover {
+	-webkit-transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
 	transform: rotate(360deg);
 }
 
@@ -209,6 +308,7 @@ button {
 }
 
 article.card {
+	-webkit-box-shadow: 2px 1px 19px -10px rgba(161, 158, 161, 1);
 	box-shadow: 2px 1px 19px -10px rgba(161, 158, 161, 1);
 }
 
@@ -219,7 +319,7 @@ article.card {
 }
 
 .about-text h3 {
-	padding-bottom: 1rem;
+	padding: 2rem 0 1rem 0;
 }
 
 .about-text blockquote {
@@ -229,6 +329,12 @@ article.card {
 @media (min-width: 768px) {
 	.about-text {
 		padding: 0 5rem;
+	}
+}
+
+@media (min-width: 992px) {
+	.about-text {
+		text-align: left;
 	}
 }
 
@@ -260,6 +366,12 @@ article.card {
 }
 
 @media (min-width: 768px) {
+	.carousel-item div .quote {
+		padding: 1rem 5rem;
+	}
+}
+
+@media (min-width: 992px) {
 	.carousel-item div .quote {
 		padding: 1rem 20rem;
 	}
@@ -295,5 +407,11 @@ article.card {
 
 /* Footer */
 footer {
-	padding: 5rem 0 1rem 0;
+	padding: 2rem 0 1rem 0;
+}
+
+@media (min-width: 992px) {
+	footer {
+		padding: 5rem 0 1rem 0;
+	}
 }
