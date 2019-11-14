@@ -14,7 +14,13 @@ body {
 }
 
 section {
-	padding: 7rem 0;
+	padding: 3rem 0;
+}
+
+@media (min-width: 768px) {
+	section {
+		padding: 7rem 0;
+	}
 }
 
 ul {
@@ -47,6 +53,7 @@ h6 {
 
 h2 {
 	font-weight: 800;
+	padding-top: 2rem;
 }
 
 p,
@@ -62,9 +69,15 @@ li {
 }
 
 .title {
-	padding-bottom: 3rem;
+	padding-bottom: 1rem;
 	font-weight: bold;
 	font-size: 200%;
+}
+
+@media (min-width: 768px) {
+	.title {
+		padding-bottom: 3rem;
+	}
 }
 
 .turquoise-text {
@@ -201,7 +214,22 @@ article.card {
 
 /* About Us */
 .about-text {
-	padding: 0 5rem;
+	padding: 0 3rem;
+	text-align: center;
+}
+
+.about-text h3 {
+	padding-bottom: 1rem;
+}
+
+.about-text blockquote {
+	padding-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+	.about-text {
+		padding: 0 5rem;
+	}
 }
 
 /* Testimonials */
@@ -246,12 +274,23 @@ article.card {
 
 /* Contact */
 .contact-form {
-	padding: 3rem;
 	background-color: white;
+	margin: 1rem 2rem;
+	padding: 2rem;
 }
 
 .contact-form h5 {
 	padding-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+	.contact-form {
+		padding: 3rem;
+	}
+
+	.contact-form h5 {
+		padding-bottom: 2rem;
+	}
 }
 
 /* Footer */

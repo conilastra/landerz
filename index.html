@@ -26,7 +26,7 @@
       <div class="container-fluid">
         <div class="row bg-white">
 
-          <h1 class="col col-md-12 logo order-md-2 py-3" id="logo">Landerz<span class="turquoise-text">.</span></h1>
+          <h1 class="col col-md-12 logo order-md-2 py-3 d-lg-none" id="logo">Landerz<span class="turquoise-text">.</span></h1>
   
           <nav class="col col-md-12 navbar navbar-expand-md navbar-light bg-white d-flex justify-content-end">
       
@@ -43,7 +43,7 @@
                     <a class="nav-link" href="#features">Features</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="#">About Us</a>
+                      <a class="nav-link" href="#about-us">About Us</a>
                   </li>
                   <li class="nav-item">
                       <a class="nav-link" href="#testimonials">Testimonials</a>
@@ -52,7 +52,7 @@
                       <a class="nav-link" href="#">Blog</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="#">Contact</a>
+                      <a class="nav-link" href="#contact">Contact</a>
                   </li>
                 </ul>
               </div>
@@ -61,9 +61,11 @@
         </div> 
       </header>
 
+      <h1 class="col col-md-12 logo order-md-2 py-3 d-none d-lg-flex" id="logo">Landerz<span class="turquoise-text">.</span></h1>
+
 
     <!-- Hero Section --> 
-    <section class="pb-4" id="hero">
+    <section id="hero" class="pb-4">
       <div class="container-fluid">
         <div class="row align-items-center">
           <div class="col-12 col-md-6 order-md-2 hero-img"></div>
@@ -79,7 +81,7 @@
     </section>
 
     <!-- Features -->    
-    <section class="gray-bg mt-4 wow fadeIn" data-wow-offset="10" id="features"></section>
+    <section id="features" class="gray-bg mt-4 wow fadeIn" data-wow-offset="10"></section>
 
     <!-- Prototypes -->
     <section class="prototypes wow fadeIn" data-wow-offset="10">
@@ -96,7 +98,7 @@
               <li><span class="icon icon-check"></span> Adipisci excepturi aliquam</li>
               <li><span class="icon icon-check"></span> Deleniti labore reiciendis</li>
             </ul>
-            <article class="container card py-4">
+            <article class="container card py-4 d-none d-md-block ">
               <div class="row align-items-center px-3">
                 <img src="./assets/images/person_1.jpg" class="img-fluid sm-thumbnail" alt="">
                 
@@ -115,14 +117,14 @@
     </section>
 
     <!-- About Us -->
-    <section class="gray-bg  wow fadeIn" data-wow-offset="10">
+    <section id="about-us" class="gray-bg  wow fadeIn" data-wow-offset="10">
       <div class="container"> 
         <h3 class="title text-center">About Us</h3>     
         <div class="row justify-content-around py-4">
-          <div class="col-5">
+          <div class="d-none d-md-block col-12 col-md-5">
             <img src="./assets/images/about_1.jpg" class="img-fluid" alt="">
           </div>
-          <div class="col-6 about-text">
+          <div class="col-12 col-md-6 about-text">
               <h3>Create interactive prototypes</h3>
               <blockquote>Eos cumque optio dolores excepturi rerum temporibus magni recusandae eveniet, totam omnis consectetur maxime quibusdam expedita dolorem dolor nobis dicta labore quaerat esse magnam unde, aperiam delectus! At maiores, itaque.</blockquote>
               <button>Learn More</button>
@@ -143,7 +145,7 @@
     </section>
 
     <!-- Contact -->
-    <section class="gray-bg  wow fadeIn" data-wow-offset="10">
+    <section id="contact" class="gray-bg wow fadeIn" data-wow-offset="10">
       <div class="container">
           <h3 class="title text-center">Get In Touch</h3>
           <div class="row justify-content-center">
