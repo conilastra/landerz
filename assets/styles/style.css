@@ -148,9 +148,15 @@ button {
 	}
 }
 
+.navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .active > .nav-link,
 a.nav-link.active {
 	color: #00d2b5;
+}
+
+#home,
+.navbar-light .navbar-nav .active > .nav-link {
+	color: black;
 }
 
 /* Navbar */
@@ -271,7 +277,7 @@ a.nav-link.active {
 }
 
 .feature-card:hover {
-	border: 1px solid #00d2b6;
+	border: 2px solid #00d2b6;
 }
 
 .icon-container {
