@@ -1,4 +1,8 @@
 /* GENERAL STYLES */
+* {
+	box-sizing: border-box;
+}
+
 html {
 	scroll-behavior: smooth;
 }
@@ -6,11 +10,19 @@ html {
 body {
 	font-family: 'Montserrat', sans-serif;
 	max-width: 100vw;
-	box-sizing: border-box;
+	line-height: 1.7;
 }
 
 section {
-	padding: 1rem 0;
+	padding: 7rem 0;
+}
+
+ul {
+	padding: 0;
+}
+
+li {
+	list-style: none;
 }
 
 /* Text */
@@ -37,7 +49,8 @@ h2 {
 	font-weight: 800;
 }
 
-p {
+p,
+li {
 	color: #6c757d;
 }
 
@@ -49,8 +62,9 @@ p {
 }
 
 .title {
+	padding-bottom: 3rem;
+	font-weight: bold;
 	font-size: 200%;
-	padding: 50px 0;
 }
 
 .turquoise-text {
@@ -67,7 +81,7 @@ button {
 	transition: background-color .5s, padding .5s ease-out;
 }
 
-.dark-hover:hover {
+.button-hover:hover {
 	background: rgb(0, 210, 181);
 	background: linear-gradient(90deg, rgba(0, 210, 181, 1) 0%, rgba(0, 164, 145, 1) 27%, rgba(20, 98, 103, 1) 100%);
 }
@@ -85,20 +99,43 @@ button {
 	z-index: 1020;
 }
 
-/* Hero */
 @media (min-width: 768px) {
 	.navbar {
 		box-shadow: 0px -11px 20px 10px #8888883b;
 	}
 }
 
+/* Hero */
 #hero {
-	padding-top: 60px;
+	height: 100vh;
+	padding: 0;
+}
+
+.hero-img {
+	background: url("../images/landing_1.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 40vh;
+}
+
+@media (min-width: 768px) {
+	.hero-img {
+		height: 100vh;
+	}
+
+	.hero-text {
+		padding: 0 6rem;
+	}
+
+	.hero-text h2 {
+		font-size: 250%;
+		padding-right: 5rem;
+	}
 }
 
 /* Features */
-#features {
-	background: #efefef82;
+.gray-bg {
+	background: #f6f6f6;
 }
 
 .feature-card {
@@ -133,7 +170,49 @@ button {
 	transform: rotate(360deg);
 }
 
+/* Prototypes */
+.prototypes {
+	padding-bottom: 7rem;
+}
+
+.icon {
+	padding-right: 1rem;
+	color: #91d054;
+}
+
+.sm-thumbnail {
+	height: 50px;
+	width: 50px;
+	border-radius: 100%;
+	margin: 1rem;
+}
+
+.list {
+	padding: 1rem 0;
+}
+
+.list li {
+	margin-bottom: .8rem;
+}
+
+article.card {
+	box-shadow: 2px 1px 19px -10px rgba(161, 158, 161, 1);
+}
+
+/* About Us */
+.about-text {
+	padding: 0 5rem;
+}
+
 /* Testimonials */
+
+#testimonials h3 {
+	padding-bottom: 0;
+}
+
+#testimonials {
+	padding-bottom: 0;
+}
 
 .thumbnail {
 	height: 100px;
@@ -145,12 +224,15 @@ button {
 	font-style: italic;
 	line-height: 1.8rem;
 	color: #807d7d;
-	text-align: center;
 	padding: 1rem;
 }
 
+.carousel-item div .quote {
+	text-align: center;
+}
+
 @media (min-width: 768px) {
-	.quote {
+	.carousel-item div .quote {
 		padding: 1rem 20rem;
 	}
 }
@@ -160,4 +242,19 @@ button {
 	width: 4px;
 	height: 4px;
 	border-radius: 100%;
+}
+
+/* Contact */
+.contact-form {
+	padding: 3rem;
+	background-color: white;
+}
+
+.contact-form h5 {
+	padding-bottom: 2rem;
+}
+
+/* Footer */
+footer {
+	padding: 5rem 0 1rem 0;
 }

@@ -51,14 +51,14 @@ axios
 setFeatures = () => {
 	const features = document.getElementById('features');
 	const container = document.createElement('div');
-	container.setAttribute('class', 'container');
+	container.setAttribute('class', 'container-fluid');
 
 	const row = document.createElement('div');
 	row.setAttribute('class', 'row d-flex justify-content-center');
 
 	const title = document.createElement('h3');
 	title.textContent = 'Features';
-	title.setAttribute('class', 'title text-center py-4 font-weight-bold');
+	title.setAttribute('class', 'title text-center font-weight-bold');
 
 	const featureList = [
 		{ title: 'Business Consulting', icon: 'icon-autorenew' },
@@ -71,7 +71,7 @@ setFeatures = () => {
 
 	featureList.map((feature) => {
 		const card = document.createElement('article');
-		card.setAttribute('class', 'card col-md-5 col-lg-3 feature-card');
+		card.setAttribute('class', 'card col-md-5 col-lg-3 feature-card wow fadeIn');
 
 		const circle = document.createElement('div');
 		circle.setAttribute('class', 'icon-container');
